@@ -107,4 +107,41 @@ And you can `curl` the nodejs container to see the simple app:
 > curl http://localhost:3000 -s | grep /title
     <title>NodeJS MongoDB demo</title>
 ```
+### Clean Up
+
+To stop the containers, you can back to the original termal and just type **Ctrl-C** and it will stop both of the containers:
+
+```bash
+mongo_1  | 2020-07-29T19:42:20.681+0000 I  NETWORK  [conn2] received client metadata from 172.19.0.3:34026 conn2: { driver: { name: "nodejs", version: "3.5.9" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.19.76-linuxkit" }, platform: "'Node.js v14.6.0, LE (legacy)" }
+mongo_1  | 2020-07-29T19:42:38.846+0000 I  SHARDING [conn2] Marking collection test.values as collection version: <unsharded>
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping nodejs_mongodb_demo_node_1  ... done
+Stopping nodejs_mongodb_demo_mongo_1 ... done
+```
+You will see both of the containers stopped:
+
+```bash
+> docker ps -a
+CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                         PORTS               NAMES
+842fcf0d6367        nodejs_mongodb_demo_node   "docker-entrypoint.s…"   58 minutes ago      Exited (0) 17 seconds ago                          nodejs_mongodb_demo_node_1
+16636b8b28c6        mongo                      "docker-entrypoint.s…"   59 minutes ago      Exited (0) 17 seconds ago                          nodejs_mongodb_demo_mongo_1
+```
+
+If you like, you can remove the containers since they don't have any state:
+
+```bash
+> docker rm $(docker ps -a -q)
+842fcf0d6367
+16636b8b28c6
+```
+
+You can also delete the created and pulled docker images:
+
+```bash
+> docker rmi nodejs_mongodb_demo_node node mongo
+Untagged: nodejs_mongodb_demo_node:latest
+Deleted: sha256:a9b5fa53581f29e14542c025c9fb2aee394e9509a4911c6aee0e4cd60cbc9059
+...
+```
+
 ### Remotely on GKE (TODO)
