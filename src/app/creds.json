@@ -1,0 +1,7 @@
+{
+  "mongoHost": "mongo",
+  "mongoPort": "27017",
+  "mongoDatabase": "info",
+  "mongoUser": "YOUR_MONGO_USERNAME",
+  "mongoPass": "YOUR_MONGO_PASSWORD"
+}
