@@ -12,14 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "~1.19.0",
-    "cookie-parser": "~1.4.4",
-    "debug": "~4.1.1",
+    "cookie-parser": "~1.4.5",
+    "debug": "~4.3.1",
     "express": "~4.17.1",
-    "mongoose": "^5.8.11",
-    "morgan": ">=1.9.1",
-    "nconf": "^0.10.0",
+    "mongoose": "^5.11.18",
+    "morgan": ">=1.10.0",
+    "nconf": "^0.11.2",
     "node-statsd": "^0.1.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.2",
     "serve-favicon": "~2.5.0"
   }
 }
