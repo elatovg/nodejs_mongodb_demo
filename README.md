@@ -145,3 +145,17 @@ Deleted: sha256:a9b5fa53581f29e14542c025c9fb2aee394e9509a4911c6aee0e4cd60cbc9059
 ```
 
 ### Remotely on GKE (TODO)
+
+## Updating the packages
+To update the libraries used in the repo you can do the following:
+
+```bash
+> cd src/app
+> npm update --save
+```
+
+If there are breaking changes but still needs sercurity updates you can run the following:
+
+```bash
+> npm audit fix --force
+```
