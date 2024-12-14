@@ -15,7 +15,7 @@
     "cookie-parser": "~1.4.5",
     "debug": "~4.3.1",
     "express": "~4.17.1",
-    "mongoose": "^8.8.3",
+    "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "nconf": "^0.11.4",
     "node-statsd": "^0.1.1",
